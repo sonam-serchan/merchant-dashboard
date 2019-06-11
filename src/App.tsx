@@ -1,15 +1,33 @@
 import DatePicker from 'antd/lib/date-picker';
 import 'antd/lib/date-picker/style/css';
-import { observer, inject } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import React from 'react';
 import './App.css';
+import http from './core/services/http';
 import logo from './logo.svg';
+
 
 @inject("appStore")
 @observer
 export default class App extends React.Component<{
-  appStore?:any
+  appStore?: any
 }> {
+  
+  componentDidMount() {
+
+    http.get('/user?ID=12345')
+      .then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
+  }
 
   render() {
     return (

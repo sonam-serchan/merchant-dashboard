@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import AppStore from './Store';
+import AppStore from './store';
 
 const appStore = new AppStore();
 const hydrate = create({
