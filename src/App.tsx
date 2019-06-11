@@ -2,7 +2,7 @@ import DatePicker from 'antd/lib/date-picker';
 import 'antd/lib/date-picker/style/css';
 import { inject, observer } from 'mobx-react';
 import React from 'react';
-import './App.css';
+import './App.scss';
 import http from './core/services/http';
 import logo from './logo.svg';
 
