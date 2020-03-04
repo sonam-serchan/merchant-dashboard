@@ -10,6 +10,7 @@
     "@types/react-router-dom": "^5.1.3",
     "antd": "^4.0.1",
     "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
     "mobx": "^5.15.4",
     "mobx-persist": "^0.4.1",
