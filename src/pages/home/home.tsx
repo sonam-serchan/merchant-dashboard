@@ -1,8 +1,7 @@
-import 'antd/lib/date-picker/style/css';
 import { inject, observer } from 'mobx-react';
 import React from 'react';
 import http from '../../core/services/http';
-import './App.scss';
+import './home.scss';
 
 @inject("appStore")
 @observer
@@ -11,7 +10,6 @@ export default class HomePage extends React.Component<{
 }> {
 
   componentDidMount() {
-
     http.get('/user?ID=12345')
       .then(function (response: any) {
         // handle success
