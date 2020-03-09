@@ -1,34 +1,31 @@
-import { inject, observer } from 'mobx-react';
-import React from 'react';
-import http from '../../core/services/http';
-import './home.scss';
+import { inject, observer } from "mobx-react";
+import React from "react";
+import http from "../../core/services/http";
+import "./home.scss";
+import AppStore from "../../Store";
 
 @inject("appStore")
 @observer
 export default class HomePage extends React.Component<{
-  appStore?: any
+  appStore: AppStore;
 }> {
-
   componentDidMount() {
-    http.get('/user?ID=12345')
-      .then(function (response: any) {
+    http
+      .get("/user?ID=12345")
+      .then(function(response: any) {
         // handle success
         console.log(response);
       })
-      .catch(function (error: any) {
+      .catch(function(error: any) {
         // handle error
         console.log(error);
       })
-      .finally(function () {
+      .finally(function() {
         // always executed
       });
   }
 
   render() {
-    return (
-      <div>
-        Home Screen
-      </div>
-    )
+    return <div>Home Screen</div>;
   }
 }
