@@ -10,7 +10,8 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .menu, .user-menu{
+
+  .ant-menu{
     background-color: transparent !important;
     color: white !important;
     border-right: none !important;
@@ -22,16 +23,55 @@
     background-color: transparent !important;
     font-weight: bold;
     color: white !important;
-
-    &:focus{
-      transition: none !important;
-    }
   }
 
-  .ant-menu-item-active{
+  .ant-menu-item-active, .ant-menu-submenu-active{
     background-color: transparent !important;
   }
 
+  .ant-menu-submenu-title:active {
+    background: transparent !important;
+}
+ 
+  .support-links{
+    button{
+      height: 52px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+    }
+  }
+}
+
+.drawer{
+  .ant-drawer-body {
+    background-color: #1743EA !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .ant-menu{
+    background-color: transparent !important;
+    color: white !important;
+    border-right: none !important;
+    overflow: hidden;
+  }
+
+  .ant-menu-item-selected{
+    background-color: transparent !important;
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .ant-menu-item-active, .ant-menu-submenu-active{
+    background-color: transparent !important;
+  }
+
+  .ant-menu-submenu-title:active {
+    background: transparent !important;
+}
+ 
   .support-links{
     button{
       height: 52px;

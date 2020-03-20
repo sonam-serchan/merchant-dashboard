@@ -13,6 +13,6 @@ export default class GetStartedPage extends React.Component<{
   }
 
   render() {
-    return <div>Get Started</div>;
+    return <div className="">Get Started</div>;
   }
 }
