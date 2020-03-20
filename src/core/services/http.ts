@@ -1,13 +1,12 @@
 import axios from 'axios';
 
-const token = localStorage.getItem('token');
-if (token) {
-    axios.defaults.headers.common['Authorization'] = token;
-}
-
 // Add a request interceptor
 axios.interceptors.request.use((config) => {
     // Do something before request is sent
+    const appStore = JSON.parse(localStorage.getItem("appStore") || "{}");
+    if (appStore["token"]) {
+        config.headers.Authorization = `Bearer ${appStore["token"]}`;
+    }
     return config;
 }, (error) => {
     // Do something with request error
