@@ -8,14 +8,13 @@ import AppStore from "./store";
 @inject("appStore")
 @observer
 export default class App extends React.Component<{
-  appStore?: AppStore;
+  appStore: AppStore;
   history: any;
 }> {
   render() {
     return (
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/home" component={HomePage} />
         <Route component={() => <Redirect to="/" />} />
       </Switch>
     );
