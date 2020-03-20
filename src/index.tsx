@@ -3,10 +3,10 @@ import { Provider } from "mobx-react";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
-import App from "./app2";
+import App from "./app";
 import "./index.scss";
 import * as serviceWorker from "./service.worker";
-import AppStore from "./store2";
+import AppStore from "./store";
 
 const appStore = new AppStore();
 const hydrate = create({
