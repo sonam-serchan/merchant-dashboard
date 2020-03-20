@@ -1,33 +1,47 @@
-.App {
-  text-align: center;
-}
+.sider{
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  background-color: #1743EA !important;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .ant-layout-sider-children{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+  .menu, .user-menu{
+    background-color: transparent !important;
+    color: white !important;
+    border-right: none !important;
+    overflow: hidden;
+  }
+
+
+  .ant-menu-item-selected{
+    background-color: transparent !important;
+    font-weight: bold;
+    color: white !important;
+
+    &:focus{
+      transition: none !important;
+    }
+  }
+
+  .ant-menu-item-active{
+    background-color: transparent !important;
+  }
+
+  .support-links{
+    button{
+      height: 52px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+    }
   }
 }
+
+.site-layout{
+  background: #F2F2F2 !important;
+}
+

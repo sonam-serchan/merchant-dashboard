@@ -1,11 +1,11 @@
 import { inject, observer } from "mobx-react";
 import React from "react";
 import AppStore from "../../store";
-import "./home.scss";
+import "./get-started.scss";
 
 @inject("appStore")
 @observer
-export default class HomePage extends React.Component<{
+export default class GetStartedPage extends React.Component<{
   appStore: AppStore;
 }> {
   componentDidMount() {
@@ -13,6 +13,6 @@ export default class HomePage extends React.Component<{
   }
 
   render() {
-    return <div>Home Screen</div>;
+    return <div>Get Started</div>;
   }
 }
