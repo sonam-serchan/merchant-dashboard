@@ -5,8 +5,9 @@ import { inject, observer } from "mobx-react";
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./app.scss";
-import HomePage from "./pages/home/home";
 import AppStore from "./store";
+
+import GetStartedPage from './pages/get-started/get-started';
 
 const { SubMenu } = Menu;
 const { Content, Footer, Sider } = Layout;
@@ -94,7 +95,7 @@ export default class App extends React.Component<{
           <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
             <div className="site-layout-background" style={{ padding: 24, textAlign: 'center' }}>
               <Switch>
-                <Route exact path="/" component={HomePage} />
+                <Route exact path="/" component={GetStartedPage} />
                 <Route component={() => <Redirect to="/" />} />
               </Switch>
             </div>
