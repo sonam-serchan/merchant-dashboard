@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import App from "./app2";
 import "./index.scss";
 import * as serviceWorker from "./service.worker";
-import AppStore from "./store";
+import AppStore from "./store2";
 
 const appStore = new AppStore();
 const hydrate = create({
