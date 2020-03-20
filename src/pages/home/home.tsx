@@ -2,7 +2,7 @@ import { inject, observer } from "mobx-react";
 import React from "react";
 import http from "../../core/services/http";
 import "./home.scss";
-import AppStore from "../../Store";
+import AppStore from "../../store";
 
 @inject("appStore")
 @observer
@@ -12,15 +12,15 @@ export default class HomePage extends React.Component<{
   componentDidMount() {
     http
       .get("/user?ID=12345")
-      .then(function(response: any) {
+      .then(function (response: any) {
         // handle success
         console.log(response);
       })
-      .catch(function(error: any) {
+      .catch(function (error: any) {
         // handle error
         console.log(error);
       })
-      .finally(function() {
+      .finally(function () {
         // always executed
       });
   }

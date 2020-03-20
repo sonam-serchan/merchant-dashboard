@@ -2,10 +2,11 @@ import { create } from "mobx-persist";
 import { Provider } from "mobx-react";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { BrowserRouter, Route } from "react-router-dom";
+import App from "./app2";
 import "./index.scss";
-import * as serviceWorker from "./serviceWorker";
-import AppStore from "./Store";
+import * as serviceWorker from "./service.worker";
+import AppStore from "./store";
 
 const appStore = new AppStore();
 const hydrate = create({
@@ -17,7 +18,9 @@ hydrate("appStore", appStore)
   .then(() => {
     ReactDOM.render(
       <Provider appStore={appStore}>
-        <App />
+        <BrowserRouter>
+          <Route path="/" component={App} />
+        </BrowserRouter>
       </Provider>,
       document.getElementById("root")
     );
